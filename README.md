@@ -1,25 +1,90 @@
-## AWS Amplify React+Vite Starter Template
+## [Devias Kit - React](https://material-kit-react.devias.io/)
 
-This repository provides a starter template for creating applications using React+Vite and AWS Amplify, emphasizing easy setup for authentication, API, and database capabilities.
+![license](https://img.shields.io/badge/license-MIT-blue.svg)
 
-## Overview
+[![Devias Kit - React](https://github.com/devias-io/material-kit-react/blob/main/public/assets/thumbnail.png)](https://material-kit-react.devias.io/)
 
-This template equips you with a foundational React application integrated with AWS Amplify, streamlined for scalability and performance. It is ideal for developers looking to jumpstart their project with pre-configured AWS services like Cognito, AppSync, and DynamoDB.
+> Free React Admin Dashboard made with [MUI's](https://mui.com) components, [React](https://reactjs.org) and of course [Next.js](https://github.com/vercel/next.js) to boost your app development process!
 
-## Features
+## Pages 
 
-- **Authentication**: Setup with Amazon Cognito for secure user authentication.
-- **API**: Ready-to-use GraphQL endpoint with AWS AppSync.
-- **Database**: Real-time database powered by Amazon DynamoDB.
+- [Dashboard](https://material-kit-react.devias.io)
+- [Customers](https://material-kit-react.devias.io/dashboard/customers)
+- [Integrations](https://material-kit-react.devias.io/dashboard/integrations)
+- [Settings](https://material-kit-react.devias.io/dashboard/settings)
+- [Account](https://material-kit-react.devias.io/dashboard/account)
+- [Sign In](https://material-kit-react.devias.io/auth/sign-in)
+- [Sign Up](https://material-kit-react.devias.io/auth/sign-up)
+- [Reset Password](https://material-kit-react.devias.io/auth/reset-password)
 
-## Deploying to AWS
+## Free Figma Community File
 
-For detailed instructions on deploying your application, refer to the [deployment section](https://docs.amplify.aws/react/start/quickstart/#deploy-a-fullstack-app-to-aws) of our documentation.
+- [Duplicate File](https://www.figma.com/file/b3L1Np4RYiicZAOMopHNkm/Devias-Dashboard-Design-Library-Kit)
 
-## Security
+## Upgrade to PRO Version
 
-See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more information.
+We also have a pro version of this product which bundles even more pages and components if you want
+to save more time and design efforts :)
+
+| Free Version (this one)  | [Devias Kit Pro](https://mui.com/store/items/devias-kit-pro/)                |
+| ------------------------ | :--------------------------------------------------------------------------- |
+| **8** Pages              | **80+** Pages                                                                |
+| ✔ Custom Authentication  | ✔ Authentication with **Amplify**, **Auth0**, **Firebase** and **Supabase**  |
+| -                        | ✔ Vite Version                                                               |
+| -                        | ✔ Dark Mode Support                                                          |
+| -                        | ✔ Complete Users Flows                                                       |
+| -                        | ✔ Premium Technical Support                                                  |
+
+## Quick start
+
+- Clone the repo: `git clone https://github.com/devias-io/material-kit-react.git`
+- Make sure your Node.js and npm versions are up to date
+- Install dependencies: `npm install` or `yarn`
+- Start the server: `npm run dev` or `yarn dev`
+- Open browser: `http://localhost:3000`
+
+## File Structure
+
+Within the download you'll find the following directories and files:
+
+```
+┌── .editorconfig
+├── .eslintrc.js
+├── .gitignore
+├── CHANGELOG.md
+├── LICENSE.md
+├── next-env.d.ts
+├── next.config.js
+├── package.json
+├── README.md
+├── tsconfig.json
+├── public
+└── src
+	├── components
+	├── contexts
+	├── hooks
+	├── lib
+	├── styles
+	├── types
+	└── app
+		├── layout.tsx
+		├── page.tsx
+		├── auth
+		└── dashboard
+```
+
+## Resources
+
+- More freebies like this one: https://devias.io
+
+## Reporting Issues:
+
+- [Github Issues Page](https://github.com/devias-io/material-kit-react/issues)
 
 ## License
 
-This library is licensed under the MIT-0 License. See the LICENSE file.
+- Licensed under [MIT](https://github.com/devias-io/material-kit-react/blob/main/LICENSE.md)
+
+## Contact Us
+
+- Email Us: support@deviasio.zendesk.com
