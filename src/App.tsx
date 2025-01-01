@@ -1,36 +1,40 @@
-import React from "react";
-import "./App.css";
+import { useEffect, useState } from "react";
+import type { Schema } from "../amplify/data/resource";
+import { generateClient } from "aws-amplify/data";
 
-interface Feature {
-  title: string;
-  description: string;
-  icon: string;
-}
+const client = generateClient<Schema>();
 
-const features: Feature[] = [
-  { title: "Feature 1", description: "Description of Feature 1", icon: "⚙️" },
-  { title: "Feature 2", description: "Description of Feature 2", icon: "📈" },
-  { title: "Feature 3", description: "Description of Feature 3", icon: "🔒" },
-  { title: "Feature 4", description: "Description of Feature 4", icon: "🌐" },
-  { title: "Feature 5", description: "Description of Feature 5", icon: "📂" },
-  { title: "Feature 6", description: "Description of Feature 6", icon: "💡" },
-];
+function App() {
+  const [todos, setTodos] = useState<Array<Schema["Todo"]["type"]>>([]);
 
-const App: React.FC = () => {
+  useEffect(() => {
+    client.models.Todo.observeQuery().subscribe({
+      next: (data) => setTodos([...data.items]),
+    });
+  }, []);
+
+  function createTodo() {
+    client.models.Todo.create({ content: window.prompt("Todo content") });
+  }
+
   return (
-    <div className="portal">
-      <h1 className="portal-title">Welcome to the Portal</h1>
-      <div className="card-container">
-        {features.map((feature, index) => (
-          <div key={index} className="card">
-            <div className="card-icon">{feature.icon}</div>
-            <h2 className="card-title">{feature.title}</h2>
-            <p className="card-description">{feature.description}</p>
-          </div>
+    <main>
+      <h1>Verentity Tasks</h1>
+      <button onClick={createTodo}>+ new</button>
+      <ul>
+        {todos.map((todo) => (
+          <li key={todo.id}>{todo.content}</li>
         ))}
+      </ul>
+      <div>
+        Landing POage Created. Authoritative source of TODO list is on JIRA .
+        <br />
+        <a href="https://docs.amplify.aws/react/start/quickstart/#make-frontend-updates">
+          Review next step of this tutorial.
+        </a>
       </div>
-    </div>
+    </main>
   );
-};
+}
 
 export default App;
